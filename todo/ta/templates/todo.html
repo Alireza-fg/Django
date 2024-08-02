@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Items</title>
+</head>
+<body bgcolor="#00FFFF">
+    <center><h1>List of Daily Activities </h1></center>
+    <center><p>============================ </p></center>
+   <center>
+    <li>
+        {% for item in todos %}
+          <ul>
+                      <p> {{ item.title }} : {% if item.status %} Done {% else %} Not Done {% endif %} </p> 
+
+          </ul>
+        {% endfor %}
+   </li>
+   </center>
+</body>
+</html>
